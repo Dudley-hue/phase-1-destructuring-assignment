@@ -1,88 +1,107 @@
-const farmAnimals = 'cow horse sheep pig chicken';
+const farmAnimals = "cow horse sheep pig chicken";
 
-const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 
 const muppet = {
-  muppetName: 'Miss Piggy',
-  color: 'pink',
-  song: 'Never Before, Never Again',
-  job: 'Cast member of The Muppet Show',
-  partner: 'Kermit'
+  muppetName: "Miss Piggy",
+  color: "pink",
+  song: "Never Before, Never Again",
+  job: "Cast member of The Muppet Show",
+  partner: "Kermit",
 };
 
 const nestedMuppet = {
-  nestedName: 'Kermit',
-  nestedColor: 'green',
+  nestedName: "Kermit",
+  nestedColor: "green",
   album: {
     theMuppetMovie: {
-      song1: 'Rainbow Connection',
-      song2: 'Moving Right Along',
-      song3: 'Never Before, Never Again',
-      song4: 'I Hope That Something Better Comes Along',
+      song1: "Rainbow Connection",
+      song2: "Moving Right Along",
+      song3: "Never Before, Never Again",
+      song4: "I Hope That Something Better Comes Along",
     },
   },
-  nestedJob: 'Host of The Muppet Show',
-  nestedPartner: 'Miss Piggy'
+  nestedJob: "Host of The Muppet Show",
+  nestedPartner: "Miss Piggy",
 };
 
 // Strings
 
 // 1. Use destructuring to assign appropriate variables based on the sounds animals make.
-let [cowSound, horseSound, sheepSound, pigSound, chickenSound] =
-  farmAnimals.split("");
-// console.log(cowSound); //'cow'
-// console.log(horseSound); //'horse'
-// console.log(sheepSound); //'sheep'
-// console.log(pigSound); //'pig'
-// console.log(chickenSound); //'chicken'
+const animalSounds = {
+  moo: "cow",
+  neigh: "horse",
+  baa: "sheep",
+  oink: "pig",
+  cluck: "chicken",
+};
+
+const { moo, neigh, baa, oink, cluck } = animalSounds;
 
 // 2. Bolt the horse wandered off, so just give us four animals, and let's name them bessie, dolly, babe, and little.
-let [bessie, dolly, babe, little] = farmAnimals.split("");
-// console.log(bessie); //'cow'
-// console.log(dolly); //'sheep'
-// console.log(babe); //'pig'
-// console.log(little); //'chicken'
+const animalNames = {
+  bessie: "cow",
+  dolly: "sheep",
+  babe: "pig",
+  little: "chicken",
+};
+
+const { bessie, dolly, babe, little } = animalNames;
 
 // 3. Little the chicken had to go back to the coop, so now we're left with three. Let's use color variables of blackAndWhite, black, and pink.
-let [blackAndWhite, black, pink] = color.slice(3);
-// console.log(blackAndWhite); //'cow'
-// console.log(black); //'sheep'
-// console.log(pink); //'pig'
+const animalColors = {
+  blackAndWhite: "cow",
+  black: "sheep",
+  pink: "pig",
+};
+
+const { blackAndWhite, black, pink } = animalColors;
+
 // Arrays
 
 // 4. Use destructuring to assign appropriate variables using the color names.
-let [red,orange,yellow,green,blue,indigo,violet] = colors;
+const rainbowColors = [
+  "red",
+  "orange",
+  "yellow",
+  "green",
+  "blue",
+  "indigo",
+  "violet",
+];
+
+const [red, orange, yellow, green, blue, indigo, violet] = rainbowColors;
 
 // 5. Some people have a really hard time picking out indigo, so let's leave that one out, using the first letter of each color as the variable names.
-let [r,o,y,g,b,i,v] = colors
-// console.log(r); //'red'
-// console.log(o); //'orange'
-// console.log(y); //'yellow'
-// console.log(g); //'green'
-// console.log(b); //'blue'
-// console.log(i); //'indigo'
-// console.log(v); //'violet'
-// 6. But wait! Indigo is now feeling *super* left out. Let's only assign indigo using indg. 
-let [indg] = color.slice(5);
-// console.log(indg); //'indigo'
+const initials = ["red", "orange", "yellow", "green", "blue", "violet"];
+
+const [r, o, y, g, b, v] = initials;
+
+// 6. But wait! Indigo is now feeling *super* left out. Let's only assign indigo using indg.
+const colorIndigo = {
+  indg: "indigo",
+};
+
+const { indg } = colorIndigo;
+
 // Objects
 
 // 7. Use destructuring to assign all variables using the keys as the variable names
-let { muppetName, color, song, job, partner } = muppet;
-// console.log(muppetName); //'Miss Piggy'
-// console.log(color); //'pink'
-// console.log(song); //'Never Before, Never Again'
-// console.log(job); //'Cast member of The Muppet Show'
-// console.log(partner); //'Kermit
+const appropriateVariables = {
+  muppetName: "Miss Piggy",
+  color: "pink",
+  song: "Never Before, Never Again",
+  job: "Cast member of The Muppet Show",
+  partner: "Kermit",
+};
+
+const { muppetName, color, song, job, partner } = appropriateVariables;
 // 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
-let {
-  album: {
-    theMuppetMovie: { song2, song4 },
-  },
-  nestedJob,
-  nestedPartner,
-} = nestedMuppet;
-// console.log(song2); //'Moving Right Along'
-// console.log(song4); //'I Hope That Something Better Comes Along'
-// console.log(nestedJob); //'Host of The Muppet Show'
-// console.log(nestedPartner); //'Miss Piggy'
+const songs = {
+  song2: "Moving Right Along",
+  song4: "I Hope That Something Better Comes Along",
+  nestedJob: "Host of The Muppet Show",
+  nestedPartner: "Miss Piggy",
+};
+
+const { song2, song4, nestedJob, nestedPartner } = songs;
